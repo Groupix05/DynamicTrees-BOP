@@ -10,7 +10,7 @@ updateJSONURL="https://github.com/DynamicTreesTeam/DynamicTreesVersionInfo/blob/
 displayURL="https://www.curseforge.com/minecraft/mc-mods/dtbop" #optional
 logoFile="" #optional
 credits="ferreusveritas" #optional
-authors="mangoose, Max Hyper" #optional
+authors="mangoose, Max Hyper, Groupix05" #optional
 
 description='''
 Compatibility Mod between Dynamic trees and Biomes o' plenty
@@ -19,34 +19,34 @@ Compatibility Mod between Dynamic trees and Biomes o' plenty
 [[dependencies.dtbop]] #optional
     modId="forge" #mandatory
     mandatory=true #mandatory
-    versionRange="[41,)" #mandatory
+    versionRange="[47,)" #mandatory
     ordering="NONE"
     side="BOTH"
 
 [[dependencies.dtbop]]
     modId="minecraft"
     mandatory=true
-    versionRange="[1.19,1.19.3)"
+    versionRange="[1.20.1,)"
     ordering="NONE"
     side="BOTH"
 
 [[dependencies.dtbop]]
     modId="dynamictrees"
     mandatory=true
-    versionRange="[1.1.0-BETA1,)"
+    versionRange="[1.3.0-BETA1,)"
     ordering="AFTER"
     side="BOTH"
 
 [[dependencies.dtbop]]
     modId="dynamictreesplus"
     mandatory=false
-    versionRange="[1.1.0,)"
+    versionRange="[1.2.0-BETA1,)"
     ordering="AFTER"
     side="BOTH"
 
 [[dependencies.dtbop]]
     modId="biomesoplenty"
     mandatory=true
-    versionRange="[17.0.0.0,17.2.0.0)"
+    versionRange="[18.0.0.560,)"
     ordering="AFTER"
     side="BOTH"
