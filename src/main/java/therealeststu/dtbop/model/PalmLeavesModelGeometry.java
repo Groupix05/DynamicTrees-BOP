@@ -25,11 +25,10 @@ public class PalmLeavesModelGeometry implements IUnbakedGeometry<PalmLeavesModel
     }
 
     @Override
-    public BakedModel bake(IGeometryBakingContext owner, ModelBakery bakery, Function<Material, TextureAtlasSprite> spriteGetter, ModelState modelTransform, ItemOverrides overrides, ResourceLocation modelLocation) {
+    public BakedModel bake(IGeometryBakingContext owner, ModelBaker bakery, Function<Material, TextureAtlasSprite> spriteGetter, ModelState modelTransform, ItemOverrides overrides, ResourceLocation modelLocation) {
         return new PalmLeavesBakedModel(frondsTextureLocation, spriteGetter);
     }
 
-    @Override
     public Collection<Material> getMaterials(IGeometryBakingContext owner, Function<ResourceLocation, UnbakedModel> modelGetter, Set<Pair<String, String>> missingTextureErrors) {
         if (frondsTextureLocation == null) return new HashSet<>();
         return Collections.singleton(new Material(TextureAtlas.LOCATION_BLOCKS, frondsTextureLocation));
