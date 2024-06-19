@@ -522,18 +522,30 @@
       "chance": 1.0
     }
   },
-
   {
-    "select": { "name": "biomesoplenty:undergrowth" },
+    "only_if_loaded": "dynamictreesplus",
+    "select": { "name": "biomesoplenty:mystic_grove" },
+    "apply": {
+      "species": {
+        "method": "splice_before",
+        "random": {
+          "...": 6,
+          "dynamictreesplus:red_mushroom": 1
+        }
+      }
+    }
+  },
+  {
+    "select": { "name": "biomesoplenty:fungal_jungle" },
     "apply": {
       "species" : {
         "random" : {
-          "dtbop:hellbark" : 1,
-          "dtbop:hellbark_bush" : 7
+          "oak_undergrowth" : 9,
+          "oak" : 1
         }
       },
-      "density": 0.6,
-      "chance": 0.8
+      "density":[1.5],
+      "chance": 0.6
     }
   }
 ]

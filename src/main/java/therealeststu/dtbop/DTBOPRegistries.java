@@ -1,17 +1,25 @@
 package therealeststu.dtbop;
 
 import biomesoplenty.api.biome.BOPBiomes;
+import biomesoplenty.common.worldgen.feature.misc.SmallRedMushroomFeature;
+import com.ferreusveritas.dynamictrees.DynamicTrees;
 import com.ferreusveritas.dynamictrees.api.cell.CellKit;
 import com.ferreusveritas.dynamictrees.api.registry.TypeRegistryEvent;
+import com.ferreusveritas.dynamictrees.api.worldgen.BiomePropertySelectors;
+import com.ferreusveritas.dynamictrees.api.worldgen.FeatureCanceller;
 import com.ferreusveritas.dynamictrees.block.leaves.LeavesProperties;
 import com.ferreusveritas.dynamictrees.growthlogic.GrowthLogicKit;
 import com.ferreusveritas.dynamictrees.systems.genfeature.BeeNestGenFeature;
 import com.ferreusveritas.dynamictrees.systems.genfeature.GenFeature;
 import com.ferreusveritas.dynamictrees.tree.species.Species;
+import com.ferreusveritas.dynamictrees.worldgen.featurecancellation.MushroomFeatureCanceller;
 import net.minecraft.core.Holder;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BiomeTags;
 import net.minecraft.world.level.biome.Biome;
+import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
+import net.minecraft.world.level.levelgen.feature.configurations.HugeMushroomFeatureConfiguration;
+import net.minecraft.world.level.levelgen.feature.configurations.RandomBooleanFeatureConfiguration;
 import net.minecraftforge.common.Tags;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -103,6 +111,28 @@ public class DTBOPRegistries {
                     .with(BeeNestGenFeature.WORLD_GEN_CHANCE_FUNCTION, (world, pos) ->
                             Objects.requireNonNull(ForgeRegistries.BIOMES.tags()).isKnownTagName(Tags.Biomes.IS_LUSH) ? 0.0005 : 0.0));
         }
+    }
+
+    public static final FeatureCanceller MUSHROOM_CANCELLER = new MushroomFeatureCanceller<>(new ResourceLocation(DynamicTreesBOP.MOD_ID,"mushroom"), HugeMushroomFeatureConfiguration.class){
+        @Override
+        public boolean shouldCancel(final ConfiguredFeature<?, ?> configuredFeature, final BiomePropertySelectors.NormalFeatureCancellation featureCancellations) {
+            final ResourceLocation featureRegistryName = ForgeRegistries.FEATURES.getKey(configuredFeature.feature());
+            if (featureRegistryName == null) {return false;}
+
+            if (configuredFeature.config() instanceof HugeMushroomFeatureConfiguration) {
+                return true;
+            }
+            if (configuredFeature.feature() instanceof SmallRedMushroomFeature){
+                return true;
+            }
+
+            return super.shouldCancel(configuredFeature, featureCancellations);
+        }
+    };
+
+    @SubscribeEvent
+    public static void onFeatureCancellerRegistry(final com.ferreusveritas.dynamictrees.api.registry.RegistryEvent<FeatureCanceller> event) {
+        event.getRegistry().registerAll(MUSHROOM_CANCELLER);
     }
 
 }

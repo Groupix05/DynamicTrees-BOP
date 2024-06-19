@@ -9,7 +9,7 @@ displayName="Dynamic Trees for Biomes o' Plenty" #mandatory
 updateJSONURL="https://github.com/DynamicTreesTeam/DynamicTreesVersionInfo/blob/master/Add-ons/BOP.json?raw=true" #optional
 displayURL="https://www.curseforge.com/minecraft/mc-mods/dtbop" #optional
 logoFile="" #optional
-credits="ferreusveritas, Groupix05" #optional
+credits="ferreusveritas, Nyfaria, ISNing, Groupix05" #optional
 authors="mangoose, Max Hyper" #optional
 
 description='''
