@@ -1,7 +1,6 @@
 {
   "replace": false,
   "values": [
-    "dtbop:cherry_branch",
     "dtbop:fir_branch",
     "dtbop:magic_branch",
     "dtbop:jacaranda_branch",

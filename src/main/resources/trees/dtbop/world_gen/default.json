@@ -143,35 +143,13 @@
     }
   },
   {
-    "select": { "name": "biomesoplenty:cherry_blossom_grove" },
+    "select": { "name": "biomesoplenty:snowblossom_grove" },
     "apply": {
-      "species" : {
-        "random" : {
-          "dtbop:white_cherry" : 4,
-          "dtbop:pink_cherry" : 4,
-          "dtbop:flowering_oak" : 1,
-          "dtbop:flowering_oak_undergrowth" : 1
-        }
-      },
-      "density": [ 0.5, 0.25, 0.5 ],
-      "chance": 1.0,
-      "forestness" : 1.0
-    }
-  },
-  {
-    "select": { "name": "biomesoplenty:bamboo_grove" },
-    "apply": {
-      "species" : {
-        "random" : {
-          "dtbop:white_cherry" : 1,
-          "dtbop:pink_cherry" : 1,
-          "dtbop:flowering_oak" : 6,
-          "dtbop:flowering_oak_undergrowth" : 2
-        }
-      },
-      "density": [ 0.8, 0.25, 0.7 ],
-      "chance": 0.8,
-      "forestness" : 1.0
+      "species": "dtbop:snowblossom",
+      "density": [
+        0.3
+      ],
+      "chance": 1.0
     }
   },
   {
