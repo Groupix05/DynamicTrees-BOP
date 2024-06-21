@@ -1,6 +1,7 @@
-// 1.20.1	2024-06-19T13:37:14.3988592	dtbop DT Block Tags
+// 1.20.1	2024-06-20T17:45:28.3877314	dtbop DT Block Tags
 e5a7820bb4d937763dc8386a954f823085f0f5b5 data/dynamictrees/tags/blocks/branches.json
 484eff8a825525b2c46f395213d2a55584631484 data/dynamictrees/tags/blocks/branches_that_burn.json
+ca766da105ea060d14420cb16c31f2aa44738b77 data/dynamictrees/tags/blocks/fungus_caps.json
 b984bfb479854b74ec9dfd521c89bddbcc63e00d data/dynamictrees/tags/blocks/leaves.json
 9467efc9dc979dd60c456f9eca34aecbf66ecd70 data/dynamictrees/tags/blocks/rooty_soil.json
 79f595c631ed91a556bf5067858334e519dc2e12 data/dynamictrees/tags/blocks/saplings.json

@@ -1,4 +1,4 @@
-// 1.20.1	2024-06-19T13:37:14.404863	Loot Tables
+// 1.20.1	2024-06-20T17:45:28.3947871	Loot Tables
 2f0b3483b597ecdfe835ae0c85df19f0526ecaa2 data/dtbop/loot_tables/blocks/acacia_twiglet_leaves.json
 8082ec65edb55f4b7f9436f639257f761263125d data/dtbop/loot_tables/blocks/acacia_undergrowth_leaves.json
 cf003c8be54922949d7fd23dfa984eaa17cfa6da data/dtbop/loot_tables/blocks/cypress_willow_leaves.json
@@ -93,6 +93,7 @@ ac541f71f73f2e4b772b962fc9382649b6e64f3a data/dtbop/loot_tables/trees/leaves/yel
 cffeb1fd356442b3607a06c2e27c4ca8301b909c data/dtbop/loot_tables/trees/voluntary/dying.json
 cdfca46b8b55990cb40be700cb07171feb3a447d data/dtbop/loot_tables/trees/voluntary/fir.json
 e88dd656cfaba5fd47cc13728a5296cabb719326 data/dtbop/loot_tables/trees/voluntary/flowering_oak.json
+9a1a0b05a178ff58cc79b8150d9c13fddea60415 data/dtbop/loot_tables/trees/voluntary/glowshroom.json
 72562ba0403fd5cb8f1d46b680b0f987c4c6111c data/dtbop/loot_tables/trees/voluntary/hellbark_bush.json
 95ffb3139149e4733b995b638ede8c33588ec689 data/dtbop/loot_tables/trees/voluntary/jacaranda.json
 fe48fec854d57285395c472db42849a38fa39178 data/dtbop/loot_tables/trees/voluntary/magic_poplar.json
@@ -104,6 +105,7 @@ b4001463c65acccf9c8e81e4e142fc163657397d data/dtbop/loot_tables/trees/voluntary/
 5ed7fefe8e30f5540813fdc767534fcc7a4dff8c data/dtbop/loot_tables/trees/voluntary/small_redwood.json
 0e3659b65e15baf17e7a91888799711021672838 data/dtbop/loot_tables/trees/voluntary/snowblossom.json
 2ba0c43d6acbe88489f8893cad313fdfb9aaddb4 data/dtbop/loot_tables/trees/voluntary/spruce_poplar.json
+5f1d4cc529a886f5e2304e0a7943525f47f195ac data/dtbop/loot_tables/trees/voluntary/toadstool.json
 3c746b5b2665d1484f5495958283c73c3fe229c9 data/dtbop/loot_tables/trees/voluntary/umbran.json
 d56cc79017ff3f5f57e63328ccf8dc63f0b2b71a data/dtbop/loot_tables/trees/voluntary/willow.json
 c2e436a41abf8066dc1fae7bc061915aeb9fd529 data/dtbop/loot_tables/trees/voluntary/yellow_autumn.json

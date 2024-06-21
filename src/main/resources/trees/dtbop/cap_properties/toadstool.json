@@ -1,0 +1,5 @@
+{
+  "only_if_loaded": "dynamictreesplus",
+  "primitive_cap": "biomesoplenty:toadstool_block",
+  "material_color": "COLOR_ORANGE"
+}

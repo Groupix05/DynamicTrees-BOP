@@ -1,0 +1,6 @@
+{
+  "only_if_loaded": "dynamictreesplus",
+  "primitive_cap": "biomesoplenty:glowshroom_block",
+  "material_color": "DIAMOND",
+  "light": 10
+}
