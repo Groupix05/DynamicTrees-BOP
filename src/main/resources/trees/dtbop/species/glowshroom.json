@@ -18,19 +18,13 @@
     }
   },
   "primitive_sapling": "biomesoplenty:glowshroom",
+  "sapling_shape": "dtbop:round_short_mushroom",
   "acceptable_soils": ["fungus_like"],
   "features" : [
-    "bottom_flare",
     {
       "name": "mushroom_rot",
       "properties": {
         "alternate_mushroom_chance": 1
-      }
-    },
-    {
-      "name": "mound",
-      "properties": {
-        "mound_cutoff_radius": 999
       }
     }
   ]

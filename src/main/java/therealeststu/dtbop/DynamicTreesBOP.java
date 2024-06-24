@@ -31,6 +31,7 @@ public class DynamicTreesBOP {
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {
+        DTBOPRegistries.setup();
     }
 
 //    @OnlyIn(Dist.CLIENT)

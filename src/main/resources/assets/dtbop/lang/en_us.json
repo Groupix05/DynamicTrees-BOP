@@ -78,6 +78,10 @@
   "block.dtbop.redwood_branch":"Redwood Tree",
   "block.dtbop.umbran_branch":"Umbran Tree",
 
+  "item.dtbop.toadstool_seed":"Toadstool Cap",
+  "item.dtbop.glowshroom_seed":"Glowshroom Cap",
+  "species.dtbop.toadstool":"Toadstool",
+  "species.dtbop.glowshroom":"Glowshroom",
 
   "block.dtbop.large_rooty_water":"Large Water Roots"
 }

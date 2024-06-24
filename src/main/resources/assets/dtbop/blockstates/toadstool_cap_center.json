@@ -1,0 +1,117 @@
+{
+  "multipart": [
+    {
+      "when": {
+        "age": "0"
+      },
+      "apply": {
+        "model": "dtbop:block/toadstool_cap_center_age0"
+      }
+    },
+
+
+
+    {
+      "when": {
+        "age": "1|2"
+      },
+      "apply": {
+        "model": "biomesoplenty:block/toadstool_block"
+      }
+    },
+    {
+      "when": {
+        "age": "1|2"
+      },
+      "apply": {
+        "model": "biomesoplenty:block/toadstool_block",
+        "y": 90,
+        "uvlock": false
+      }
+    },
+    {
+      "when": {
+        "age": "1|2"
+      },
+      "apply": {
+        "model": "biomesoplenty:block/toadstool_block",
+        "y": 180,
+        "uvlock": false
+      }
+    },
+    {
+      "when": {
+        "age": "1|2"
+      },
+      "apply": {
+        "model": "biomesoplenty:block/toadstool_block",
+        "y": 270,
+        "uvlock": false
+      }
+    },
+
+
+
+    {
+      "when": {
+        "age": "3|4|5|6|7|8"
+      },
+      "apply": {
+        "model": "biomesoplenty:block/toadstool_block_inside"
+      }
+    },
+    {
+      "when": {
+        "age": "3|4|5|6|7|8"
+      },
+      "apply": {
+        "model": "biomesoplenty:block/toadstool_block_inside",
+        "y": 90,
+        "uvlock": false
+      }
+    },
+    {
+      "when": {
+        "age": "3|4|5|6|7|8"
+      },
+      "apply": {
+        "model": "biomesoplenty:block/toadstool_block_inside",
+        "y": 180,
+        "uvlock": false
+      }
+    },
+    {
+      "when": {
+        "age": "3|4|5|6|7|8"
+      },
+      "apply": {
+        "model": "biomesoplenty:block/toadstool_block_inside",
+        "y": 270,
+        "uvlock": false
+      }
+    },
+
+
+
+    {
+      "when": {
+        "age": "1|2|3|4|5|6|7|8"
+      },
+      "apply": {
+        "model": "biomesoplenty:block/toadstool_block",
+        "x": 270,
+        "uvlock": true
+      }
+    },
+    {
+      "when": {
+        "age": "1|2|3|4|5|6|7|8"
+      },
+      "apply": {
+        "model": "biomesoplenty:block/toadstool_block_inside",
+        "x": 90,
+        "uvlock": false
+      }
+    }
+  ]
+}
