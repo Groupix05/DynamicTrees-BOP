@@ -1,8 +1,7 @@
 {
-  "parent": "dynamictrees:block/smartmodel/mushroom_round",
+  "parent": "dtbop:block/smartmodel/mushroom_round2",
   "render_type": "minecraft:cutout_mipped",
   "textures": {
-    "cap": "dtbop:block/glowshroom_cap",
-    "stem": "minecraft:block/mushroom_stem"
+    "cap": "dtbop:block/glowshroom_cap"
   }
 }

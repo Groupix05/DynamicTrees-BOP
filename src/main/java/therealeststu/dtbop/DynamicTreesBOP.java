@@ -4,16 +4,14 @@ import com.ferreusveritas.dynamictrees.api.GatherDataHelper;
 import com.ferreusveritas.dynamictrees.api.registry.RegistryHandler;
 import com.ferreusveritas.dynamictrees.block.leaves.LeavesProperties;
 import com.ferreusveritas.dynamictrees.block.rooty.SoilProperties;
-import com.ferreusveritas.dynamictrees.resources.Resources;
 import com.ferreusveritas.dynamictrees.tree.family.Family;
 import com.ferreusveritas.dynamictrees.tree.species.Species;
-import com.ferreusveritas.dynamictreesplus.block.mushroom.CapProperties;
 import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.data.event.GatherDataEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
-import net.minecraftforge.data.event.GatherDataEvent;
 
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod(DynamicTreesBOP.MOD_ID)
@@ -41,7 +39,7 @@ public class DynamicTreesBOP {
                 Family.REGISTRY,
                 Species.REGISTRY,
                 LeavesProperties.REGISTRY
-                , CapProperties.REGISTRY
+                //, CapProperties.REGISTRY
         );
     }
 

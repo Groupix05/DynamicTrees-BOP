@@ -545,7 +545,21 @@
         }
       },
       "density":[1.5],
-      "chance": 0.6
+      "chance": 0.5
+    }
+  },
+  {
+    "only_if_loaded": "dynamictreesplus",
+    "select": { "name": "biomesoplenty:fungal_jungle" },
+    "apply": {
+      "species": {
+        "method": "splice_before",
+        "random": {
+          "...": 2,
+          "dtbop:toadstool": 1
+        }
+      },
+      "chance": 0.75
     }
   }
 ]

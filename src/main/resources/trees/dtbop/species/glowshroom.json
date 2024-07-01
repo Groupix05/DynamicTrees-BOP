@@ -19,6 +19,9 @@
   },
   "primitive_sapling": "biomesoplenty:glowshroom",
   "sapling_shape": "dtbop:round_short_mushroom",
+  "model_overrides": {
+    "sapling": "dtbop:block/smartmodel/mushroom_round2"
+  },
   "acceptable_soils": ["fungus_like"],
   "features" : [
     {

@@ -9,7 +9,8 @@
   "growth_logic_kit": {
     "name": "dynamictreesplus:straight",
     "properties": {
-      "height_variation": 10
+      "height_variation": 10,
+      "chance_to_age": 0.1
     }
   },
   "generate_seed": true,
@@ -24,6 +25,10 @@
     }
   },
   "primitive_sapling": "biomesoplenty:toadstool",
+  "sapling_shape": "dtbop:toadstool",
+  "model_overrides": {
+    "sapling": "dtbop:block/smartmodel/mushroom_long"
+  },
   "acceptable_soils": ["fungus_like"],
   "features" : [
     "bottom_flare"
