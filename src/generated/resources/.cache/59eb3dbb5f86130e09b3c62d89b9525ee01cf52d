@@ -1,4 +1,4 @@
-// 1.20.1	2024-06-20T17:45:28.3947871	Loot Tables
+// 1.20.1	2024-06-30T23:59:58.5834408	Loot Tables
 2f0b3483b597ecdfe835ae0c85df19f0526ecaa2 data/dtbop/loot_tables/blocks/acacia_twiglet_leaves.json
 8082ec65edb55f4b7f9436f639257f761263125d data/dtbop/loot_tables/blocks/acacia_undergrowth_leaves.json
 cf003c8be54922949d7fd23dfa984eaa17cfa6da data/dtbop/loot_tables/blocks/cypress_willow_leaves.json
@@ -8,6 +8,7 @@ cf003c8be54922949d7fd23dfa984eaa17cfa6da data/dtbop/loot_tables/blocks/cypress_w
 17a25cdb18d7765de2e33c8cff4cc50de5a91722 data/dtbop/loot_tables/blocks/fir_leaves.json
 6e01dd99599143c7fd736aa7e56ef0a9e109f5e2 data/dtbop/loot_tables/blocks/flowering_oak_leaves.json
 dcee09bdf6c30c475c1acef08e5303c344b6bd48 data/dtbop/loot_tables/blocks/flowering_oak_undergrowth_leaves.json
+2ae78f7e6e537e029c0a08714f7555478160fe5c data/dtbop/loot_tables/blocks/glowshroom_cap.json
 f6b95730317f8bd67a6567b9866dcaddbf89e4a5 data/dtbop/loot_tables/blocks/hellbark_bush_leaves.json
 a4495bfb95fd8a8165d430e09417f1d6e3aa0b26 data/dtbop/loot_tables/blocks/hellbark_leaves.json
 0ae60143936c7dbdc233a3c7406d767e620fa77c data/dtbop/loot_tables/blocks/jacaranda_leaves.json
@@ -31,6 +32,7 @@ cf35ee0944a4e9fc20403985b7dc0ce94e34ca54 data/dtbop/loot_tables/blocks/sparse_oa
 0d469315c56b0a70e2e7d93ede022075c73bc839 data/dtbop/loot_tables/blocks/spruce_poplar_leaves.json
 52926aaa92ed385815fd06ee89af9d68ce003fef data/dtbop/loot_tables/blocks/spruce_twiglet_leaves.json
 e48ad17b3da2f64dfa0fa3181a9726315c6ca5f8 data/dtbop/loot_tables/blocks/spruce_undergrowth_leaves.json
+42835d6da244ac89ad25411d616162263315375a data/dtbop/loot_tables/blocks/toadstool_cap.json
 0cb953c77cc1079dd8a33540911db9be5e01953c data/dtbop/loot_tables/blocks/umbran_leaves.json
 cf125ad78a99092113f402a6252cdd99672e024b data/dtbop/loot_tables/blocks/willow_leaves.json
 b3ca27ef5bb3b9ffdaeef2af80ba9714693b7dea data/dtbop/loot_tables/blocks/yellow_autumn_leaves.json
@@ -89,6 +91,8 @@ f6e37ddf10c606e79f8d9319f9b239374356a9c2 data/dtbop/loot_tables/trees/leaves/spr
 86ef4d1fb68c04ad0a0cb19ad1de861630b445ba data/dtbop/loot_tables/trees/leaves/umbran.json
 9a71e755f220951b3c7b3896f266b138ed4ea478 data/dtbop/loot_tables/trees/leaves/willow.json
 ac541f71f73f2e4b772b962fc9382649b6e64f3a data/dtbop/loot_tables/trees/leaves/yellow_autumn.json
+d4efe06ead92120072cdcff96b64f2af5738975a data/dtbop/loot_tables/trees/mushroom_caps/glowshroom.json
+eed13c430814d097bbe6969bc6db072bb0784ec8 data/dtbop/loot_tables/trees/mushroom_caps/toadstool.json
 376e651d731e339b2e65ec1d5d3c93952c46a17c data/dtbop/loot_tables/trees/voluntary/dark_poplar.json
 cffeb1fd356442b3607a06c2e27c4ca8301b909c data/dtbop/loot_tables/trees/voluntary/dying.json
 cdfca46b8b55990cb40be700cb07171feb3a447d data/dtbop/loot_tables/trees/voluntary/fir.json

@@ -1,9 +1,6 @@
 {   "parent": "block/block",
   "textures": {
-    "particle": "biomesoplenty:block/toadstool_block",
-    "bottom": "biomesoplenty:block/toadstool_block_inside",
-    "top": "biomesoplenty:block/toadstool_block",
-    "side": "biomesoplenty:block/toadstool_block"
+    "particle": "#side"
   },
   "elements": [
     {   "from": [ 0, 0, 0 ],
