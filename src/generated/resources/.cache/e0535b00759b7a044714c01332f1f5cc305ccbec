@@ -1,4 +1,4 @@
-// 1.20.1	2024-07-01T00:13:56.5766696	Block States: dtbop
+// 1.20.1	2024-07-08T12:15:08.0011385	Block States: dtbop
 2606791521eac27fa77ebbeeea442b8073802a51 assets/dtbop/blockstates/acacia_twiglet_leaves.json
 2606791521eac27fa77ebbeeea442b8073802a51 assets/dtbop/blockstates/acacia_undergrowth_leaves.json
 73e97651b77d61776de74c7e9d2ef24913e4bdf5 assets/dtbop/blockstates/cypress_willow_leaves.json
@@ -39,7 +39,7 @@ d603f34830e74e385d5d3344383e84280b7ce632 assets/dtbop/blockstates/maple_twiglet_
 dc7529ceecfc31d032aef5fc9cd5aea18385ad40 assets/dtbop/blockstates/orange_autumn_leaves.json
 2a9230b142638816f6ead4dea1f83e516f2667dc assets/dtbop/blockstates/orange_autumn_sapling.json
 be6018f760569c794364897846788a136427ab38 assets/dtbop/blockstates/palm_branch.json
-da74a4358b945776a2d584f1d1cbe0a43b6e328c assets/dtbop/blockstates/palm_leaves.json
+2460d3f46a93c9fb93c86f42f714c8b77e2e0d49 assets/dtbop/blockstates/palm_leaves.json
 8ee7a30dde4b23b8e35d5293222ba504896fd228 assets/dtbop/blockstates/palm_sapling.json
 8ef838697c46c00a32d716cdcf4638eed23d1cc0 assets/dtbop/blockstates/poplar_leaves.json
 000679a00cfb3b867c5fe94a3557a844da52bb9e assets/dtbop/blockstates/poplar_sapling.json
@@ -52,6 +52,7 @@ c41ed9f68687aeda5ef8ccadab773cdcf5219b90 assets/dtbop/blockstates/redwood_leaves
 bf15524ff4c692f52a2ebc98e5366c27a27ba5bf assets/dtbop/blockstates/rooty_black_sand.json
 fbbed88cb40b46d6a8f22bf82c1727edd6992896 assets/dtbop/blockstates/rooty_dried_salt.json
 9c9d902a96af508fe7976eb743fd70616de4c5e3 assets/dtbop/blockstates/rooty_glowing_moss_block.json
+1dfcb913df103c0572c4a133c96149cbc9514cd2 assets/dtbop/blockstates/rooty_mossy_black_sand.json
 49d32f79d15eea8ab705129f4cb2c7930e47db6f assets/dtbop/blockstates/rooty_orange_sand.json
 44f361dbe5e6d9837308697867cefdd6e05563c2 assets/dtbop/blockstates/rooty_origin_grass_block.json
 3f974e24dc00734a32a110ebc1920a4b6d761f8d assets/dtbop/blockstates/rooty_white_sand.json
@@ -95,6 +96,9 @@ cab3eb1a8fcc8222de6cca98f05b2e6615571fda assets/dtbop/models/block/mahogany_bran
 9ef74da64b30ea00430d5fd70c0f1a110c24fb4d assets/dtbop/models/block/mushroom/glowshroom_cap_center_age0.json
 a193ff7167132b5db518759fd28fa4d2a076713a assets/dtbop/models/block/mushroom/toadstool_cap_center_age0.json
 674bf83d8b8b53669a0f0978515a9251a57e5e7e assets/dtbop/models/block/palm_branch.json
+31a341e5f4b803029fb38c7e6de699df4b346a3a assets/dtbop/models/block/palm_leaves/palm_core_bottom.json
+f5bb6b2fbfe559fbe37d60e76933cbe905de2b6e assets/dtbop/models/block/palm_leaves/palm_core_top.json
+4afdd4e7a31036723f56bcb4056dad558da0d45f assets/dtbop/models/block/palm_leaves/palm_frond.json
 7944d6792719005ebe2b1f4568f6488d541c4880 assets/dtbop/models/block/redwood_branch.json
 033db798a08ee510f39b21b5afc685cdb22ab2d0 assets/dtbop/models/block/redwood_root.json
 4a57237782717c8e918a299847aacd892ca6f5e6 assets/dtbop/models/block/saplings/dark_poplar.json
