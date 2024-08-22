@@ -1,6 +1,12 @@
 {
   "values": [
-    "dtbop:glowshroom_sapling",
-    "dtbop:toadstool_sapling"
+    {
+      "id": "dtbop:glowshroom_sapling",
+      "required": false
+    },
+    {
+      "id": "dtbop:toadstool_sapling",
+      "required": false
+    }
   ]
 }
