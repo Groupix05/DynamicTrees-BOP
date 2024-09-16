@@ -19,7 +19,12 @@
   {
     "_comment": "Cancel mushrooms if DT+ is installed",
     "only_if_loaded": "dynamictreesplus",
-    "select": {"OR": [{ "name": "biomesoplenty:mystic_grove" },{ "name": "biomesoplenty:fungal_jungle" }]},
+    "select": {"OR": [
+      { "name": "biomesoplenty:mystic_grove" },
+      { "name": "biomesoplenty:fungal_jungle" },
+      { "name": "biomesoplenty:glowing_grotto" },
+      { "name": "biomesoplenty:muskeg" }
+    ]},
     "cancellers": {
       "types": ["tree", "mushroom", "dtbop:mushroom"],
       "namespaces": ["biomesoplenty", "minecraft"]

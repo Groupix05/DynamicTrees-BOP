@@ -219,14 +219,6 @@
     }
   },
   {
-    "select": { "name": "biomesoplenty:muskeg" },
-    "apply": {
-      "species" : "dtbop:dead",
-      "density": 0.1,
-      "chance": 0.6
-    }
-  },
-  {
     "select": { "name": "biomesoplenty:.*wasteland" },
     "apply": {
       "species" : {
@@ -522,6 +514,29 @@
       "chance": 1.0
     }
   },
+
+
+  {
+    "select": { "name": "biomesoplenty:muskeg" },
+    "apply": {
+      "species" : "dtbop:dead",
+      "density": 0.1,
+      "chance": 0.6
+    }
+  },
+  {
+    "only_if_loaded": "dynamictreesplus",
+    "select": { "name": "biomesoplenty:muskeg" },
+    "apply": {
+      "species": {
+        "method": "splice_before",
+        "random": {
+          "...": 7,
+          "dtbop:mini_brown_mushroom": 1
+        }
+      }
+    }
+  },
   {
     "only_if_loaded": "dynamictreesplus",
     "select": { "name": "biomesoplenty:mystic_grove" },
@@ -560,6 +575,15 @@
         }
       },
       "chance": 0.75
+    }
+  },
+  {
+    "only_if_loaded": "dynamictreesplus",
+    "select": { "name": "biomesoplenty:glowing_grotto" },
+    "apply": {
+      "species" : "dtbop:glowshroom",
+      "density": [ 2 ],
+      "chance": 0.8
     }
   }
 ]

@@ -1,5 +1,6 @@
 {
   "only_if_loaded": "dynamictreesplus",
+  "type": "dtbop:glowshroom",
   "primitive_cap": "biomesoplenty:glowshroom_block",
   "age_zero_shape": "dtbop:glowshroom_age0",
   "material_color": "DIAMOND",

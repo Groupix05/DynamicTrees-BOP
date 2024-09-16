@@ -95,7 +95,6 @@ public class DTBOPRegistries {
         final Species floweringOak = Species.REGISTRY.get(new ResourceLocation(DynamicTreesBOP.MOD_ID, "flowering_oak"));
         final Species floweringAppleOak = Species.REGISTRY.get(new ResourceLocation(DynamicTreesBOP.MOD_ID, "flowering_apple_oak"));
         final Species infested = Species.REGISTRY.get(new ResourceLocation(DynamicTreesBOP.MOD_ID, "infested"));
-        final Species rainbow_birch = Species.REGISTRY.get(new ResourceLocation(DynamicTreesBOP.MOD_ID, "rainbow_birch"));
 
         LeavesProperties floweringLeaves = LeavesProperties.REGISTRY.get(new ResourceLocation(DynamicTreesBOP.MOD_ID, "flowering_oak"));
         if (floweringOak.isValid() && floweringLeaves.isValid()) {
@@ -109,48 +108,6 @@ public class DTBOPRegistries {
             LeavesProperties silkLeaves = LeavesProperties.REGISTRY.get(new ResourceLocation(DynamicTreesBOP.MOD_ID, "silk"));
             infested.addValidLeafBlocks(silkLeaves);
         }
-        //This has to be added in-code as the worldgen chance function cannot be set by the treepack
-        if (rainbow_birch.isValid()) {
-            rainbow_birch.addGenFeature(new BeeNestGenFeature(new ResourceLocation("dynamictrees", "bee_nest"))
-                    .with(BeeNestGenFeature.WORLD_GEN_CHANCE_FUNCTION, (world, pos) -> {
-                        Holder<Biome> biomeHolder = world.getUncachedNoiseBiome(pos.getX() >> 2, pos.getY() >> 2, pos.getZ() >> 2);
-                        if (biomeHolder.is(BOPBiomes.AURORAL_GARDEN))
-                            return 0.02;
-                        else return biomeHolder.is(BiomeTags.IS_FOREST) ? 0.0005 : 0.0;
-                    }));
-            rainbow_birch.addGenFeature(new BeeNestGenFeature(new ResourceLocation("dynamictrees", "bee_nest"))
-                    .with(BeeNestGenFeature.WORLD_GEN_CHANCE_FUNCTION, (world, pos) ->
-                            Objects.requireNonNull(ForgeRegistries.BIOMES.tags()).isKnownTagName(Tags.Biomes.IS_LUSH) ? 0.0005 : 0.0));
-        }
-    }
-
-    public static final FeatureCanceller MUSHROOM_CANCELLER = new MushroomFeatureCanceller<>(new ResourceLocation(DynamicTreesBOP.MOD_ID,"mushroom"), HugeMushroomFeatureConfiguration.class){
-        @Override
-        public boolean shouldCancel(final ConfiguredFeature<?, ?> configuredFeature, final BiomePropertySelectors.NormalFeatureCancellation featureCancellations) {
-            final ResourceLocation featureRegistryName = ForgeRegistries.FEATURES.getKey(configuredFeature.feature());
-            if (featureRegistryName == null) {return false;}
-
-            if (configuredFeature.config() instanceof HugeMushroomFeatureConfiguration) {
-                return true;
-            }
-            if (configuredFeature.feature() instanceof SmallRedMushroomFeature){
-                return true;
-            }
-
-            if (configuredFeature.feature() instanceof HugeToadstoolFeature){
-                return true;
-            }
-            if (configuredFeature.feature() instanceof SmallToadstoolFeature){
-                return true;
-            }
-
-            return super.shouldCancel(configuredFeature, featureCancellations);
-        }
-    };
-
-    @SubscribeEvent
-    public static void onFeatureCancellerRegistry(final com.ferreusveritas.dynamictrees.api.registry.RegistryEvent<FeatureCanceller> event) {
-        event.getRegistry().registerAll(MUSHROOM_CANCELLER);
     }
 
 }

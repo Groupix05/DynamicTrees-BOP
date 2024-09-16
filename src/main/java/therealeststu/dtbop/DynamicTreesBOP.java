@@ -6,9 +6,11 @@ import com.ferreusveritas.dynamictrees.block.leaves.LeavesProperties;
 import com.ferreusveritas.dynamictrees.block.rooty.SoilProperties;
 import com.ferreusveritas.dynamictrees.tree.family.Family;
 import com.ferreusveritas.dynamictrees.tree.species.Species;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.data.event.GatherDataEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
+import net.minecraftforge.fml.ModList;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
@@ -21,8 +23,11 @@ public class DynamicTreesBOP {
     public DynamicTreesBOP() {
         final IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
         modEventBus.addListener(this::commonSetup);
-//        modEventBus.addListener(this::clientSetup);
         modEventBus.addListener(this::gatherData);
+
+        if (ModList.get().isLoaded("dynamictreesplus")){
+            modEventBus.register(DTBOPPlusRegistries.class);
+        }
 
         MinecraftForge.EVENT_BUS.register(this);
 
@@ -41,6 +46,10 @@ public class DynamicTreesBOP {
                 LeavesProperties.REGISTRY
                 //, CapProperties.REGISTRY
         );
+    }
+
+    public static ResourceLocation location (String name){
+        return new ResourceLocation(MOD_ID, name);
     }
 
 }
