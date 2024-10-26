@@ -129,12 +129,14 @@
     }
   },
   {
-    "select": { "name": "biomesoplenty:lavender_forest" },
+    "select": { "name": "biomesoplenty:jacaranda_glade" },
     "apply": {
       "species" : {
         "random" : {
           "dtbop:jacaranda" : 7,
-          "dtbop:flowering_oak" : 1
+          "dtbop:flowering_oak" : 1,
+          "dtbop:snowblossom_twiglet" : 1,
+          "dtbop:cherry_twiglet" : 1
         }
       },
       "density": 1.0,
@@ -174,7 +176,8 @@
           "dtbop:dark_poplar" : 3,
           "dtbop:spruce_poplar" : 3,
           "oak_undergrowth" : 1,
-          "dtbop:flowering_oak_undergrowth" : 1
+          "dtbop:flowering_oak_undergrowth" : 1,
+          "dtbop:sparse_oak" : 3
         }
       },
       "density": 0.4,
@@ -210,7 +213,7 @@
       "species" : {
         "random" : {
           "dtbop:maple_twiglet" : 1,
-          "dtbop:oak_twiglet" : 1,
+          "dtbop:mangrove_twiglet" : 1,
           "dtbop:spruce_twiglet" : 1
         }
       },
@@ -345,8 +348,7 @@
       "species" : {
         "random" : {
           "dtbop:mega_fir" : 6,
-          "dtbop:fir" : 4,
-          "dtbop:maple" : 1
+          "dtbop:fir" : 4
         }
       },
       "density": [0.6],
@@ -359,7 +361,7 @@
     "apply": {
       "species" : {
         "random" : {
-          "dtbop:maple" : 9,
+          "dtbop:red_maple" : 9,
           "spruce" : 1
         }
       },
@@ -373,9 +375,9 @@
     "apply": {
       "species" : {
         "random" : {
-          "dtbop:orange_autumn" : 32,
-          "dtbop:yellow_autumn" : 32,
-          "dtbop:maple" : 32,
+          "dtbop:red_maple" : 32,
+          "dtbop:orange_maple" : 32,
+          "dtbop:yellow_maple" : 32,
           "oak" : 15,
           "apple_oak" : 1
         }
@@ -386,19 +388,11 @@
     }
   },
   {
-    "select": { "name": "biomesoplenty:seasonal_orchard" },
-    "apply": {
-      "species": "dtbop:yellow_autumn",
-      "density": 0.7,
-      "chance": 0.6
-    }
-  },
-  {
     "select": { "name": "biomesoplenty:pumpkin_patch" },
     "apply": {
       "species" : {
         "random" : {
-          "dtbop:orange_autumn" : 1,
+          "dtbop:orange_maple" : 1,
           "oak_undergrowth" : 4,
           "dtbop:oak_twiglet" : 6
         }
@@ -506,8 +500,7 @@
           "dtbop:large_magic_poplar" : 3,
           "dtbop:magic_poplar" : 5,
           "dtbop:flowering_oak" : 4,
-          "dtbop:jacaranda" : 3,
-          "dtbop:mega_dark_oak" : 1
+          "dtbop:mega_dark_oak" : 2
         }
       },
       "density": 1.0,
@@ -561,6 +554,32 @@
       },
       "density":[1.5],
       "chance": 0.5
+    }
+  },
+  {
+    "select": { "name": "biomesoplenty:aspen_glade" },
+    "apply": {
+      "species" : {
+        "random" : {
+          "dtbop:aspen" : 3
+        }
+      },
+      "density": 0.5,
+      "chance": 0.75,
+      "forestness" : 0.75
+    }
+  },
+  {
+    "select": { "name": "biomesoplenty:hot_springs" },
+    "apply": {
+      "species" : {
+        "random" : {
+          "dtbop:pine" : 3
+        }
+      },
+      "density": 0.4,
+      "chance": 0.5,
+      "forestness" : 0.5
     }
   },
   {

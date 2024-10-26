@@ -15,14 +15,14 @@
     "dtbop:jungle_twiglet_leaves",
     "dtbop:magic_poplar_leaves",
     "dtbop:mahogany_leaves",
-    "dtbop:maple_leaves",
     "dtbop:maple_twiglet_leaves",
     "dtbop:mega_dark_oak_leaves",
     "dtbop:oak_twiglet_leaves",
-    "dtbop:orange_autumn_leaves",
+    "dtbop:orange_maple_leaves",
     "dtbop:palm_leaves",
     "dtbop:poplar_leaves",
     "dtbop:rainbow_birch_leaves",
+    "dtbop:red_maple_leaves",
     "dtbop:redwood_leaves",
     "dtbop:silk_web",
     "dtbop:silk_undergrowth_web",
@@ -34,6 +34,10 @@
     "dtbop:spruce_undergrowth_leaves",
     "dtbop:umbran_leaves",
     "dtbop:willow_leaves",
-    "dtbop:yellow_autumn_leaves"
+    "dtbop:yellow_maple_leaves",
+    "dtbop:snowblossom_twiglet_leaves",
+    "dtbop:cherry_twiglet_leaves",
+    "dtbop:mangrove_twiglet_leaves",
+    "dtbop:pine_leaves"
   ]
 }

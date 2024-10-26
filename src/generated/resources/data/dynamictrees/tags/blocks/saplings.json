@@ -8,16 +8,17 @@
     "dtbop:jacaranda_sapling",
     "dtbop:magic_poplar_sapling",
     "dtbop:mahogany_sapling",
-    "dtbop:maple_sapling",
-    "dtbop:orange_autumn_sapling",
+    "dtbop:orange_maple_sapling",
     "dtbop:palm_sapling",
     "dtbop:poplar_sapling",
     "dtbop:rainbow_birch_sapling",
+    "dtbop:red_maple_sapling",
     "dtbop:redwood_sapling",
     "dtbop:snowblossom_sapling",
     "dtbop:spruce_poplar_sapling",
     "dtbop:umbran_sapling",
     "dtbop:willow_sapling",
-    "dtbop:yellow_autumn_sapling"
+    "dtbop:yellow_maple_sapling",
+    "dtbop:pine_sapling"
   ]
 }

@@ -1,6 +1,6 @@
 package therealeststu.dtbop;
 
-import biomesoplenty.common.worldgen.feature.misc.*;
+import biomesoplenty.worldgen.feature.misc.*;
 import com.ferreusveritas.dynamictrees.api.registry.TypeRegistryEvent;
 import com.ferreusveritas.dynamictrees.api.worldgen.BiomePropertySelectors;
 import com.ferreusveritas.dynamictrees.api.worldgen.FeatureCanceller;

@@ -1,9 +1,9 @@
 package therealeststu.dtbop;
 
 import biomesoplenty.api.biome.BOPBiomes;
-import biomesoplenty.common.worldgen.feature.misc.HugeToadstoolFeature;
-import biomesoplenty.common.worldgen.feature.misc.SmallRedMushroomFeature;
-import biomesoplenty.common.worldgen.feature.misc.SmallToadstoolFeature;
+import biomesoplenty.worldgen.feature.misc.HugeToadstoolFeature;
+import biomesoplenty.worldgen.feature.misc.SmallRedMushroomFeature;
+import biomesoplenty.worldgen.feature.misc.SmallToadstoolFeature;
 import com.ferreusveritas.dynamictrees.api.cell.CellKit;
 import com.ferreusveritas.dynamictrees.api.registry.TypeRegistryEvent;
 import com.ferreusveritas.dynamictrees.api.worldgen.BiomePropertySelectors;

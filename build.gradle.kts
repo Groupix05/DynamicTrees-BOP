@@ -89,12 +89,13 @@ dependencies {
     minecraft("net.minecraftforge:forge:${mcVersion}-${property("forgeVersion")}")
 
     implementation(fg.deobf("com.ferreusveritas.dynamictrees:DynamicTrees-$mcVersion:${property("dynamicTreesVersion")}"))
-    implementation(fg.deobf("curse.maven:biomes-o-plenty-220318:4764804"))
+    implementation(fg.deobf("curse.maven:biomes-o-plenty-220318:5773031"))
 
     //implementation(fg.deobf("libs:DynamicTreesPlus:1.20.1-1.2.0-BETA3"))
     implementation(fg.deobf("com.ferreusveritas.dynamictreesplus:DynamicTreesPlus-$mcVersion:${property("dynamicTreesPlusVersion")}"))
 
     runtimeOnly(fg.deobf("curse.maven:terrablender-563928:5378180"))
+    runtimeOnly(fg.deobf("curse.maven:glitchcore-955399:5787839"))
     runtimeOnly(fg.deobf("curse.maven:jade-324717:5072729"))
     runtimeOnly(fg.deobf("curse.maven:jei-238222:5101366"))
     runtimeOnly(fg.deobf("curse.maven:cc-tweaked-282001:5118388"))
