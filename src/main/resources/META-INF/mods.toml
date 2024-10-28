@@ -33,7 +33,7 @@ Compatibility Mod between Dynamic trees and Biomes o' plenty
 [[dependencies.dtbop]]
     modId="dynamictrees"
     mandatory=true
-    versionRange="[1.3.0-BETA10,)"
+    versionRange="[1.3.0,)"
     ordering="AFTER"
     side="BOTH"
 
@@ -47,6 +47,6 @@ Compatibility Mod between Dynamic trees and Biomes o' plenty
 [[dependencies.dtbop]]
     modId="biomesoplenty"
     mandatory=true
-    versionRange="[18.0.0.560,)"
+    versionRange="[19.0.0.91,)"
     ordering="AFTER"
     side="BOTH"
