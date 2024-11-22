@@ -1,4 +1,5 @@
 {
+  "type": "dtbop:twiglet",
   "family": "dtbop:maple",
   "leaves_properties": "dtbop:maple_twiglet",
   "environment_factors" : {
