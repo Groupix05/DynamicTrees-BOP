@@ -1,14 +1,14 @@
 package therealeststu.dtbop.cell;
 
-import com.ferreusveritas.dynamictrees.api.cell.Cell;
-import com.ferreusveritas.dynamictrees.api.cell.CellKit;
-import com.ferreusveritas.dynamictrees.api.cell.CellNull;
-import com.ferreusveritas.dynamictrees.api.cell.CellSolver;
-import com.ferreusveritas.dynamictrees.api.registry.Registry;
-import com.ferreusveritas.dynamictrees.cell.CellKits;
-import com.ferreusveritas.dynamictrees.cell.MetadataCell;
-import com.ferreusveritas.dynamictrees.cell.NormalCell;
-import com.ferreusveritas.dynamictrees.util.SimpleVoxmap;
+import com.dtteam.dynamictrees.api.cell.Cell;
+import com.dtteam.dynamictrees.api.cell.CellKit;
+import com.dtteam.dynamictrees.api.cell.CellNull;
+import com.dtteam.dynamictrees.api.cell.CellSolver;
+import com.dtteam.dynamictrees.api.registry.Registry;
+import com.dtteam.dynamictrees.systems.cell.CellKits;
+import com.dtteam.dynamictrees.systems.cell.MetadataCell;
+import com.dtteam.dynamictrees.systems.cell.NormalCell;
+import com.dtteam.dynamictrees.utility.SimpleVoxmap;
 import net.minecraft.core.Direction;
 import net.minecraft.resources.ResourceLocation;
 import therealeststu.dtbop.DynamicTreesBOP;
@@ -51,15 +51,15 @@ public class DTBOPCellKits {
         }
     }
 
-    public static final CellKit SPARSE = new SparseCellKit(new ResourceLocation(DynamicTreesBOP.MOD_ID, "sparse"));
-    public static final CellKit HELLBARK_SPARSE = new SparseCellKit(new ResourceLocation(DynamicTreesBOP.MOD_ID, "hellbark_sparse")) {
+    public static final CellKit SPARSE = new SparseCellKit(ResourceLocation.fromNamespaceAndPath(DynamicTreesBOP.MOD_ID, "sparse"));
+    public static final CellKit HELLBARK_SPARSE = new SparseCellKit(ResourceLocation.fromNamespaceAndPath(DynamicTreesBOP.MOD_ID, "hellbark_sparse")) {
         @Override
         public Cell getCellForBranch(int radius, int meta) {
             return radius <= 3 ? sparseBranch : CellNull.NULL_CELL;
         }
     };
 
-    public static final CellKit POPLAR = new CellKit(new ResourceLocation(DynamicTreesBOP.MOD_ID, "poplar")) {
+    public static final CellKit POPLAR = new CellKit(ResourceLocation.fromNamespaceAndPath(DynamicTreesBOP.MOD_ID, "poplar")) {
 
         private final Cell poplarBranch = new PoplarBranchCell();
         private final Cell poplarTopBranch = new PoplarTopBranchCell();
@@ -110,7 +110,7 @@ public class DTBOPCellKits {
 
     };
 
-    public static final CellKit MAHOGANY = new CellKit(new ResourceLocation(DynamicTreesBOP.MOD_ID, "mahogany")) {
+    public static final CellKit MAHOGANY = new CellKit(ResourceLocation.fromNamespaceAndPath(DynamicTreesBOP.MOD_ID, "mahogany")) {
 
         private final Cell mahoganyBranch = new MahoganyBranchCell();
 
@@ -157,7 +157,7 @@ public class DTBOPCellKits {
 
     };
 
-    public static final CellKit BRUSH = new CellKit(new ResourceLocation(DynamicTreesBOP.MOD_ID, "brush")) {
+    public static final CellKit BRUSH = new CellKit(ResourceLocation.fromNamespaceAndPath(DynamicTreesBOP.MOD_ID, "brush")) {
 
         private final Cell branch = new Cell() {
             @Override
@@ -216,7 +216,7 @@ public class DTBOPCellKits {
 
     };
 
-    public static final CellKit EUCALYPTUS = new CellKit(new ResourceLocation(DynamicTreesBOP.MOD_ID, "eucalyptus")) {
+    public static final CellKit EUCALYPTUS = new CellKit(ResourceLocation.fromNamespaceAndPath(DynamicTreesBOP.MOD_ID, "eucalyptus")) {
 
         private final Cell eucalyptusTopBranch = new EucalyptusTopBranchCell();
         private final Cell eucalyptusBranch = new NormalCell(2);
@@ -267,7 +267,7 @@ public class DTBOPCellKits {
 
     };
 
-    public static final CellKit HELLBARK = new CellKit(new ResourceLocation(DynamicTreesBOP.MOD_ID, "hellbark")) {
+    public static final CellKit HELLBARK = new CellKit(ResourceLocation.fromNamespaceAndPath(DynamicTreesBOP.MOD_ID, "hellbark")) {
 
         private final Cell hellbarkBranch = new Cell() {
             @Override

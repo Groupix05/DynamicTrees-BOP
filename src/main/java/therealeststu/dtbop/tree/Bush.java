@@ -1,12 +1,12 @@
 package therealeststu.dtbop.tree;
 
-import com.ferreusveritas.dynamictrees.systems.genfeature.BushGenFeature;
-import com.ferreusveritas.dynamictrees.systems.genfeature.GenFeatures;
-import com.ferreusveritas.dynamictrees.tree.species.Species;
+import com.dtteam.dynamictrees.systems.genfeature.BushGenFeature;
+import com.dtteam.dynamictrees.systems.genfeature.GenFeatures;
+import com.dtteam.dynamictrees.tree.species.Species;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
-import net.minecraftforge.registries.ForgeRegistries;
+import net.minecraft.core.registries.BuiltInRegistries;
 import therealeststu.dtbop.DynamicTreesBOP;
 
 import java.util.LinkedList;
@@ -23,7 +23,7 @@ public class Bush extends Species {
     }
 
     public Bush(String name, ResourceLocation log, ResourceLocation leaves, ResourceLocation altLeaves) {
-        this.setRegistryName(new ResourceLocation(DynamicTreesBOP.MOD_ID, name));
+        this.setRegistryName(ResourceLocation.fromNamespaceAndPath(DynamicTreesBOP.MOD_ID, name));
         this.setUnlocalizedName(this.getRegistryName().toString());
         this.setStandardSoils();
         this.log = log;
@@ -34,20 +34,14 @@ public class Bush extends Species {
     }
 
     public void setup() {
-        Block logBlock = ForgeRegistries.BLOCKS.getValue(log);
-        Block leavesBlock = ForgeRegistries.BLOCKS.getValue(leaves);
+        Block logBlock = BuiltInRegistries.BLOCK.get(log);
+        Block leavesBlock = BuiltInRegistries.BLOCK.get(leaves);
         Block altLeavesBlock = null;
         if (altLeaves != null) {
-            Block altLeafBlock = ForgeRegistries.BLOCKS.getValue(altLeaves);
+            Block altLeafBlock = BuiltInRegistries.BLOCK.get(altLeaves);
             if (altLeafBlock != Blocks.AIR) altLeavesBlock = altLeafBlock;
         }
         this.addGenFeature(GenFeatures.BUSH.with(BushGenFeature.LOG, logBlock)
                 .with(BushGenFeature.LEAVES, leavesBlock).with(BushGenFeature.SECONDARY_LEAVES, altLeavesBlock));
     }
-
-    @Override
-    public boolean isTransformable() {
-        return false;
-    }
-
 }

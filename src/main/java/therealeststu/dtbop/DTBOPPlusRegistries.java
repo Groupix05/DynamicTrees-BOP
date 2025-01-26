@@ -1,27 +1,31 @@
 package therealeststu.dtbop;
 
 import biomesoplenty.worldgen.feature.misc.*;
-import com.ferreusveritas.dynamictrees.api.registry.TypeRegistryEvent;
-import com.ferreusveritas.dynamictrees.api.worldgen.BiomePropertySelectors;
-import com.ferreusveritas.dynamictrees.api.worldgen.FeatureCanceller;
-import com.ferreusveritas.dynamictrees.tree.species.Species;
-import com.ferreusveritas.dynamictrees.worldgen.featurecancellation.MushroomFeatureCanceller;
-import com.ferreusveritas.dynamictreesplus.block.mushroom.CapProperties;
+
+import com.dtteam.dynamictrees.event.TypeRegistryEvent;
+import com.dtteam.dynamictrees.api.worldgen.BiomePropertySelectors;
+import com.dtteam.dynamictrees.api.worldgen.FeatureCanceller;
+import com.dtteam.dynamictrees.tree.species.Species;
+import com.dtteam.dynamictrees.worldgen.featurecancellation.MushroomFeatureCanceller;
+//import com.ferreusveritas.dynamictreesplus.block.mushroom.CapProperties;
+
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.levelgen.feature.Feature;
 import net.minecraft.world.level.levelgen.feature.configurations.HugeMushroomFeatureConfiguration;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.registries.ForgeRegistries;
-import therealeststu.dtbop.block.GlowShroomCapProperties;
-import therealeststu.dtbop.tree.GlowshroomSpecies;
+
+import net.neoforged.bus.api.SubscribeEvent;
+import net.minecraft.core.registries.BuiltInRegistries;
+
+//import therealeststu.dtbop.block.GlowShroomCapProperties;
+//import therealeststu.dtbop.tree.GlowshroomSpecies;
 
 public class DTBOPPlusRegistries {
 
-    public static final FeatureCanceller MUSHROOM_CANCELLER = new MushroomFeatureCanceller<>(new ResourceLocation(DynamicTreesBOP.MOD_ID,"mushroom"), HugeMushroomFeatureConfiguration.class){
+    public static final FeatureCanceller MUSHROOM_CANCELLER = new MushroomFeatureCanceller<>(ResourceLocation.fromNamespaceAndPath(DynamicTreesBOP.MOD_ID,"mushroom"), HugeMushroomFeatureConfiguration.class){
         @Override
         public boolean shouldCancel(final ConfiguredFeature<?, ?> configuredFeature, final BiomePropertySelectors.NormalFeatureCancellation featureCancellations) {
-            final ResourceLocation featureRegistryName = ForgeRegistries.FEATURES.getKey(configuredFeature.feature());
+            final ResourceLocation featureRegistryName = BuiltInRegistries.FEATURE.getKey(configuredFeature.feature());
             if (featureRegistryName == null) {return false;}
 
             if (configuredFeature.config() instanceof HugeMushroomFeatureConfiguration) {
@@ -42,18 +46,18 @@ public class DTBOPPlusRegistries {
     };
 
     @SubscribeEvent
-    public static void onFeatureCancellerRegistry(final com.ferreusveritas.dynamictrees.api.registry.RegistryEvent<FeatureCanceller> event) {
+    public static void onFeatureCancellerRegistry(final com.dtteam.dynamictrees.event.RegistryEvent<FeatureCanceller> event) {
         event.getRegistry().registerAll(MUSHROOM_CANCELLER);
     }
 
-    @SubscribeEvent
-    public static void registerCapPropertiesType(final TypeRegistryEvent<CapProperties> event) {
-        event.registerType(DynamicTreesBOP.location("glowshroom"), GlowShroomCapProperties.TYPE);
-    }
+    //@SubscribeEvent
+    //public static void registerCapPropertiesType(final TypeRegistryEvent<CapProperties> event) {
+    //    event.registerType(DynamicTreesBOP.location("glowshroom"), GlowShroomCapProperties.TYPE);
+    //}
 
-    @SubscribeEvent
-    public static void registerSpeciesType(final TypeRegistryEvent<Species> event) {
-        event.registerType(DynamicTreesBOP.location("glowshroom"), GlowshroomSpecies.TYPE);
-    }
+    //@SubscribeEvent
+    //public static void registerSpeciesType(final TypeRegistryEvent<Species> event) {
+    //    event.registerType(DynamicTreesBOP.location("glowshroom"), GlowshroomSpecies.TYPE);
+    //}
 
 }

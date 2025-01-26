@@ -1,6 +1,6 @@
 package therealeststu.dtbop.cell;
 
-import com.ferreusveritas.dynamictrees.api.cell.Cell;
+import com.dtteam.dynamictrees.api.cell.Cell;
 import net.minecraft.core.Direction;
 
 public class SparseBranchCell implements Cell {

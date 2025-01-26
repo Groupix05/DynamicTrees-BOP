@@ -1,6 +1,6 @@
 package therealeststu.dtbop.cell;
 
-import com.ferreusveritas.dynamictrees.util.SimpleVoxmap;
+import com.dtteam.dynamictrees.utility.SimpleVoxmap;
 import net.minecraft.core.BlockPos;
 
 public class DTBOPLeafClusters {

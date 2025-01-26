@@ -1,17 +1,16 @@
 package therealeststu.dtbop.genfeature;
 
-import com.ferreusveritas.dynamictrees.api.TreeHelper;
-import com.ferreusveritas.dynamictrees.api.configuration.ConfigurationProperty;
-import com.ferreusveritas.dynamictrees.api.network.MapSignal;
-import com.ferreusveritas.dynamictrees.block.leaves.DynamicLeavesBlock;
-import com.ferreusveritas.dynamictrees.systems.genfeature.GenFeature;
-import com.ferreusveritas.dynamictrees.systems.genfeature.GenFeatureConfiguration;
-import com.ferreusveritas.dynamictrees.systems.genfeature.context.PostGenerationContext;
-import com.ferreusveritas.dynamictrees.systems.genfeature.context.PostGrowContext;
-import com.ferreusveritas.dynamictrees.systems.nodemapper.FindEndsNode;
-import com.ferreusveritas.dynamictrees.tree.species.Species;
-import com.ferreusveritas.dynamictrees.util.BlockBounds;
-import com.ferreusveritas.dynamictrees.util.SafeChunkBounds;
+import com.dtteam.dynamictrees.utility.helper.TreeHelper;
+import com.dtteam.dynamictrees.api.configuration.ConfigurationProperty;
+import com.dtteam.dynamictrees.api.network.MapSignal;
+import com.dtteam.dynamictrees.block.leaves.DynamicLeavesBlock;
+import com.dtteam.dynamictrees.systems.genfeature.GenFeature;
+import com.dtteam.dynamictrees.systems.genfeature.GenFeatureConfiguration;
+import com.dtteam.dynamictrees.systems.genfeature.context.PostGenerationContext;
+import com.dtteam.dynamictrees.systems.genfeature.context.PostGrowContext;
+import com.dtteam.dynamictrees.systems.nodemapper.FindEndsNode;
+import com.dtteam.dynamictrees.tree.species.Species;
+import com.dtteam.dynamictrees.utility.BlockPosBounds;
 import net.minecraft.core.BlockPos;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.LevelAccessor;
@@ -46,10 +45,10 @@ public class AlternativeLeavesGenFeature extends GenFeature {
 
     @Override
     protected boolean postGenerate(GenFeatureConfiguration configuration, PostGenerationContext context) {
-        BlockBounds bounds =
-                context.species().getFamily().expandLeavesBlockBounds(new BlockBounds(context.endPoints()));
+        BlockPosBounds bounds =
+                context.species().getFamily().expandLeavesBlockBounds(new BlockPosBounds(context.endPoints()));
 
-        return setAltLeaves(configuration, context.level(), bounds, context.bounds(), context.species());
+        return setAltLeaves(configuration, context.level(), bounds, context.species());
     }
 
     @Override
@@ -69,19 +68,19 @@ public class AlternativeLeavesGenFeature extends GenFeature {
             return false;
         }
         BlockPos chosenEndPoint = endPoints.get(level.getRandom().nextInt(endPoints.size()));
-        BlockBounds bounds = species.getFamily().expandLeavesBlockBounds(new BlockBounds(chosenEndPoint));
+        BlockPosBounds bounds = species.getFamily().expandLeavesBlockBounds(new BlockPosBounds(chosenEndPoint));
 
-        return setAltLeaves(configuration, level, bounds, SafeChunkBounds.ANY, species);
+        return setAltLeaves(configuration, level, bounds, species);
     }
 
-    private boolean setAltLeaves(GenFeatureConfiguration configuration, LevelAccessor level, BlockBounds leafPositions,
-                                 SafeChunkBounds safeBounds, Species species) {
-        boolean worldGen = safeBounds != SafeChunkBounds.ANY;
+    private boolean setAltLeaves(GenFeatureConfiguration configuration, LevelAccessor level, BlockPosBounds leafPositions,
+                                 Species species) {
+        boolean worldGen = false;
 
         if (worldGen) {
             AtomicBoolean isSet = new AtomicBoolean(false);
             leafPositions.iterator().forEachRemaining((pos) -> {
-                if (safeBounds.inBounds(pos, true) && level.getRandom().nextFloat() < configuration.get(PLACE_CHANCE)) {
+                if (level.getRandom().nextFloat() < configuration.get(PLACE_CHANCE)) {
                     if (level.setBlock(pos,
                             getSwapBlockState(configuration, level, species, level.getBlockState(pos), true), 2)) {
                         isSet.set(true);

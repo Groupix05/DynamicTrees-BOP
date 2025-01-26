@@ -1,6 +1,6 @@
 package therealeststu.dtbop.cell;
 
-import com.ferreusveritas.dynamictrees.cell.MatrixCell;
+import com.dtteam.dynamictrees.systems.cell.MatrixCell;
 
 public class EucalyptusLeafCell extends MatrixCell {
 

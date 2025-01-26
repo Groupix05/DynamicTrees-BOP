@@ -1,12 +1,12 @@
 package therealeststu.dtbop.tree;
 
-import com.ferreusveritas.dynamictrees.api.registry.TypedRegistry;
-import com.ferreusveritas.dynamictrees.block.leaves.LeavesProperties;
-import com.ferreusveritas.dynamictrees.block.rooty.SoilHelper;
-import com.ferreusveritas.dynamictrees.tree.family.Family;
-import com.ferreusveritas.dynamictrees.tree.species.Species;
-import com.ferreusveritas.dynamictrees.util.SafeChunkBounds;
-import com.ferreusveritas.dynamictrees.worldgen.JoCode;
+import com.dtteam.dynamictrees.api.registry.TypedRegistry;
+import com.dtteam.dynamictrees.block.leaves.LeavesProperties;
+import com.dtteam.dynamictrees.block.soil.SoilHelper;
+import com.dtteam.dynamictrees.tree.family.Family;
+import com.dtteam.dynamictrees.tree.species.Species;
+import com.dtteam.dynamictrees.worldgen.JoCode;
+
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.resources.ResourceLocation;
@@ -42,7 +42,7 @@ public class CypressSpecies extends Species {
     }
 
     @Override
-    public BlockPos preGeneration(LevelAccessor level, BlockPos.MutableBlockPos rootPosition, int radius, Direction facing, SafeChunkBounds safeBounds, JoCode joCode) {
+    public BlockPos preGeneration(LevelAccessor level, BlockPos.MutableBlockPos rootPosition, int radius, Direction facing, boolean worldgen, JoCode joCode) {
         if (this.isWater(level.getBlockState(rootPosition))) {
             int i = 1;
             for (; i <= maxDepth; i++) {
@@ -54,7 +54,7 @@ public class CypressSpecies extends Species {
             }
             rootPosition.move(Direction.DOWN, i);
         }
-        return super.preGeneration(level, rootPosition, radius, facing, safeBounds, joCode);
+        return super.preGeneration(level, rootPosition, radius, facing, worldgen, joCode);
     }
 
     public boolean isAcceptableSoilUnderWater(BlockState soilBlockState) {

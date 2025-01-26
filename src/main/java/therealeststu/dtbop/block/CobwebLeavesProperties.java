@@ -1,10 +1,10 @@
 package therealeststu.dtbop.block;
 
-import com.ferreusveritas.dynamictrees.api.registry.TypedRegistry;
-import com.ferreusveritas.dynamictrees.block.leaves.DynamicLeavesBlock;
-import com.ferreusveritas.dynamictrees.block.leaves.LeavesProperties;
-import com.ferreusveritas.dynamictrees.block.leaves.ScruffyLeavesProperties;
-import com.ferreusveritas.dynamictrees.util.CoordUtils;
+import com.dtteam.dynamictrees.api.registry.TypedRegistry;
+import com.dtteam.dynamictrees.block.leaves.DynamicLeavesBlock;
+import com.dtteam.dynamictrees.block.leaves.LeavesProperties;
+import com.dtteam.dynamictrees.block.leaves.ScruffyLeavesProperties;
+import com.dtteam.dynamictrees.utility.helper.CoordUtils;
 import net.minecraft.core.BlockPos;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.sounds.SoundEvents;
@@ -16,7 +16,7 @@ import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.Vec3;
-import net.minecraftforge.common.util.ForgeSoundType;
+import net.neoforged.neoforge.common.util.DeferredSoundType;
 
 import javax.annotation.Nullable;
 
@@ -55,7 +55,7 @@ public class CobwebLeavesProperties extends ScruffyLeavesProperties {
 
             @Override
             public SoundType getSoundType(BlockState state, LevelReader level, BlockPos pos, @Nullable Entity entity) {
-                return new ForgeSoundType(1.0F, 1.0F, () -> SoundEvents.VINE_STEP, () -> SoundEvents.VINE_STEP, () -> SoundEvents.VINE_STEP, () -> SoundEvents.GRASS_HIT, () -> SoundEvents.VINE_STEP);
+                return new DeferredSoundType(1.0F, 1.0F, () -> SoundEvents.VINE_STEP, () -> SoundEvents.VINE_STEP, () -> SoundEvents.VINE_STEP, () -> SoundEvents.GRASS_HIT, () -> SoundEvents.VINE_STEP);
             }
 
             public int getHydrationLevelFromNeighbors(LevelAccessor level, BlockPos pos, LeavesProperties leavesProperties) {
